@@ -1,0 +1,19 @@
+name: gripen
+version: 0.1.0
+
+authors:
+  - Julien Reichardt <contact@jrei.ch>
+
+description: An HTTP Router in Crystal, with automatic Swagger/OpenAPI API docs generation.
+
+dependencies:
+  gripen_router:
+    github: grip-framework/gripen-router
+
+development_dependencies:
+  ameba:
+    github: crystal-ameba/ameba
+  swagger:
+    github: icyleaf/swagger
+
+license: ISC
