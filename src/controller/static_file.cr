@@ -17,7 +17,7 @@ module Gripen::Controller::StaticFile
 
     def call(parameters : Parameters, context : ::HTTP::Server::Context)
       full_path = context.request.path
-      context.request.path = parameters[FilesystemPath].path
+      context.request.path = '/' + parameters[FilesystemPath].path
       begin
         @http_handler.call context
       ensure
@@ -28,7 +28,7 @@ module Gripen::Controller::StaticFile
     end
   end
 
-  struct FilesystemPath < Parameters::PathGlob
+  struct FilesystemPath < Parameters::GlobPath
     getter path : String
 
     def initialize(@path)
@@ -39,7 +39,7 @@ module Gripen::Controller::StaticFile
     end
   end
 
-  # Serves the files inside this directory.
+  # Serves the files inside a `public_dir` to the `path` endpoint.
   #
   # See stdlib `HTTP::StaticFileHandler` for more information
   def static_file(path : String, public_dir : String, fallthrough : Bool = true, directory_listing : Bool = true)
