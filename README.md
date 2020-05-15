@@ -29,7 +29,7 @@ dependencies:
 
 ## Documentation
 
-Coming soon!
+https://grip-framework.github.io/gripen/
 
 ## Usage
 
