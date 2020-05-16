@@ -19,7 +19,6 @@ require "./controller/route_resolver"
 #   # Declare routes
 # end
 # ```
-
 abstract struct Gripen::Controller
   alias PathType = String | Parameters::PathType
 
