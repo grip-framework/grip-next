@@ -10,7 +10,7 @@ def with_temp_dir(tempdir, &)
   File.write tempdir / "file", "hello"
   yield
   File.delete tempdir / "file"
-  Dir.rmdir tempdir.to_s
+  Dir.delete tempdir.to_s
 end
 
 describe Gripen::Controller::StaticFile do

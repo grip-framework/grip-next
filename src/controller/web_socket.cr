@@ -46,7 +46,7 @@ module Gripen::Controller::WebSocket
       ex || result
     end
 
-    private def hanle_websocket(context : ::HTTP::Server::Context, & : ::HTTP::WebSocket ->) : Response?
+    private def hanle_websocket(context : ::HTTP::Server::Context, &block : ::HTTP::WebSocket ->) : Response?
       return MissingHeader.new("Upgrade") unless upgrade = context.request.headers["Upgrade"]?
       return InvalidHeader.new("Upgrade", upgrade) unless upgrade.compare("websocket", case_insensitive: true) == 0
 
@@ -72,10 +72,8 @@ module Gripen::Controller::WebSocket
         response.headers["Sec-WebSocket-Accept"] = accept_code
         response.upgrade do |io|
           ws_session = ::HTTP::WebSocket.new(io, sync_close: false)
-          yield ws_session
+          block.call ws_session
           ws_session.run
-        ensure
-          io.close
         end
       end
       nil
