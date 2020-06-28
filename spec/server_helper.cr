@@ -7,7 +7,7 @@ struct TestHTTPController < Gripen::Controller
 end
 
 def run_server(server)
-  server.log = nil
+  server.log.backend.as(Log::IOBackend).io = File.open File::NULL, "w"
 
   client = server.client
 

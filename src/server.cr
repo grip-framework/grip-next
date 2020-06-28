@@ -19,8 +19,8 @@ require "./handler/logger"
 # server.start
 # ```
 class Gripen::Server
-  # Logs when the server is starting/stopping.
-  property log : IO? = STDOUT
+  # Server logger, used when the server is starting/stopping.
+  getter log : ::Log = Log.for("grippen.server")
 
   # Server listening host.
   property host : String
@@ -67,18 +67,18 @@ class Gripen::Server
     # Handle exiting correctly on stop/kill signals
     Signal::INT.trap { stop }
     Signal::TERM.trap { stop }
-    @log.try &.puts "Server listening on #{@host}:#{@port}"
+    @log.info { "Server listening on #{@host}:#{@port}" }
     @server.listen
   end
 
   # Stops the server.
   def stop : Nil
     if !@server.closed?
-      @log.try &.print "Stopping server... "
+      @log.info { "Stopping server... " }
       @server.close
-      @log.try &.puts "stopped."
+      @log.info { "stopped." }
     else
-      @log.try &.puts "Server not started."
+      @log.info { "Server not started." }
     end
   end
 
