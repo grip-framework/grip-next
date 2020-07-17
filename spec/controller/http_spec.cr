@@ -70,7 +70,7 @@ end
 
 struct User
   include Gripen::Response
-  class_getter response_info = Gripen::Response::Info.new "User created", http_status: ::HTTP::Status::CREATED, content_type: "application/json"
+  class_getter response_info = Gripen::Response::Info.new "User created", http_status: :CREATED, content_type: "application/json"
 
   def add_response(context)
     context.response << "myuser"
@@ -79,7 +79,7 @@ end
 
 struct UserError
   include Gripen::Response
-  class_getter response_info = Gripen::Response::Info.new "Invalid user", http_status: ::HTTP::Status::BAD_REQUEST, content_type: "application/json"
+  class_getter response_info = Gripen::Response::Info.new "Invalid user", http_status: :BAD_REQUEST, content_type: "application/json"
 
   def add_response(context)
     context.response << @@response_info.description

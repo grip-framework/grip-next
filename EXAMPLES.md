@@ -160,7 +160,7 @@ require "gripen/controller"
 
 struct SomeUser
   include Gripen::Response
-  class_getter response_info = Gripen::Response::Info.new "User created", http_status: ::HTTP::Status::CREATED, content_type: "application/json"
+  class_getter response_info = Gripen::Response::Info.new "User created", http_status: :CREATED, content_type: "application/json"
 
   def add_response(context)
     context.response << %({"name": "myuser"})

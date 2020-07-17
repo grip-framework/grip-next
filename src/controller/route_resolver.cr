@@ -4,7 +4,7 @@ abstract struct Gripen::Controller
     class Error < Gripen::Error
       struct MethodNotAllowed
         include Response
-        class_getter response_info = Response::Info.new http_status: ::HTTP::Status::METHOD_NOT_ALLOWED
+        class_getter response_info = Response::Info.new http_status: :METHOD_NOT_ALLOWED
 
         def add_response(context : ::HTTP::Server::Context)
           context.response.puts @@response_info.description
@@ -13,7 +13,7 @@ abstract struct Gripen::Controller
 
       struct NotFound
         include Response
-        class_getter response_info = Response::Info.new http_status: ::HTTP::Status::NOT_FOUND
+        class_getter response_info = Response::Info.new http_status: :NOT_FOUND
 
         def add_response(context : ::HTTP::Server::Context)
           context.response.puts @@response_info.description

@@ -6,7 +6,7 @@ module Gripen::Controller::Action
   module Error
     struct InvalidQueryParameterName
       include Response
-      class_getter response_info = Response::Info.new "Invalid query parameter name", http_status: ::HTTP::Status::BAD_REQUEST
+      class_getter response_info = Response::Info.new "Invalid query parameter name", http_status: :BAD_REQUEST
 
       def initialize(parameter)
         @error_message = "#{@@response_info.description}: #{parameter}"
@@ -19,7 +19,7 @@ module Gripen::Controller::Action
 
     struct UnexpectedQueryParameters
       include Response
-      class_getter response_info = Response::Info.new "Unexpected query parameters", http_status: ::HTTP::Status::BAD_REQUEST
+      class_getter response_info = Response::Info.new "Unexpected query parameters", http_status: :BAD_REQUEST
 
       def initialize(query : String)
         @error_message = "#{@@response_info.description}: #{query}"

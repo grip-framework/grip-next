@@ -34,7 +34,7 @@ module Gripen::Controller::HTTP
 
   struct MissingRequestBody(T)
     include Response
-    class_getter response_info = Response::Info.new "Missing request body", http_status: ::HTTP::Status::BAD_REQUEST
+    class_getter response_info = Response::Info.new "Missing request body", http_status: :BAD_REQUEST
     getter error_message = "#{@@response_info.description}: expecting #{T}"
 
     def add_response(context : ::HTTP::Server::Context)
@@ -44,7 +44,7 @@ module Gripen::Controller::HTTP
 
   struct UnexpectedRequestBody(T)
     include Response
-    class_getter response_info = Response::Info.new "Unexpected request body", http_status: ::HTTP::Status::BAD_REQUEST
+    class_getter response_info = Response::Info.new "Unexpected request body", http_status: :BAD_REQUEST
     getter error_message = "#{@@response_info.description}: expecting #{T}"
 
     def add_response(context : ::HTTP::Server::Context)

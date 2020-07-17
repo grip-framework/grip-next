@@ -7,7 +7,7 @@ An HTTP Router in Crystal, with automatic [Swagger/OpenAPI](https://github.com/i
 
 ## Features
 
-The Ricr web framework emphasise on type safety. By defining expected types for requests and responses, it also provides documentation.
+The Gripen web framework emphasise on type safety. By defining expected types for requests and responses, it also provides documentation.
 
 - Safe by returning an error at startup if routes conflict
 - Automatic cast of requests and responses with defined types

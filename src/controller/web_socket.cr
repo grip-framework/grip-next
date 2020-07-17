@@ -10,7 +10,7 @@ module Gripen::Controller::WebSocket
     struct InvalidHeader
       include Response
 
-      class_getter response_info = Response::Info.new "Invalid header value", http_status: ::HTTP::Status::BAD_REQUEST
+      class_getter response_info = Response::Info.new "Invalid header value", http_status: :BAD_REQUEST
 
       def initialize(header : String, value : String)
         @error_message = "#{@@response_info.description} for #{header}: #{value}"
@@ -24,7 +24,7 @@ module Gripen::Controller::WebSocket
     struct MissingHeader
       include Response
 
-      class_getter response_info = Response::Info.new "Missing header", http_status: ::HTTP::Status::BAD_REQUEST
+      class_getter response_info = Response::Info.new "Missing header", http_status: :BAD_REQUEST
 
       def initialize(header : String)
         @error_message = "#{@@response_info.description}: #{header}"

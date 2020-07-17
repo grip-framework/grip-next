@@ -39,7 +39,7 @@ struct Gripen::Parameters
   class Error < Gripen::Error
     struct InvalidValue
       include Response
-      class_getter response_info = Response::Info.new "Invalid parameter value", http_status: ::HTTP::Status::BAD_REQUEST
+      class_getter response_info = Response::Info.new "Invalid parameter value", http_status: :BAD_REQUEST
 
       private def initialize(@description : String, parameter, value, @exception_cause)
         @error_message = "#{@description}: #{value} (parameter: #{parameter})"
@@ -60,7 +60,7 @@ struct Gripen::Parameters
 
     struct DuplicatedKey
       include Response
-      class_getter response_info = Response::Info.new "Duplicated parameter", http_status: ::HTTP::Status::BAD_REQUEST
+      class_getter response_info = Response::Info.new "Duplicated parameter", http_status: :BAD_REQUEST
 
       private def initialize(@description : String, parameter, value, @exception_cause)
         @error_message = "#{@description}: #{value} (parameter: #{parameter})"
@@ -96,7 +96,7 @@ struct Gripen::Parameters
 
     struct MissingRequiredQuery
       include Response
-      class_getter response_info = Response::Info.new "Missing query parameter", http_status: ::HTTP::Status::BAD_REQUEST
+      class_getter response_info = Response::Info.new "Missing query parameter", http_status: :BAD_REQUEST
       @description : String
 
       def initialize(query)
