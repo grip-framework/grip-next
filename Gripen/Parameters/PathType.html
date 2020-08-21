@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.34.0">
+<meta name="crystal_docs.project_version" content="master">
+<meta name="crystal_docs.project_name" content="gripen">
+
+
+<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="gripen">
+  <title>Gripen::Parameters::PathType - gripen master</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../../index.html">
+          gripen
+        </a>
+      </h1>
+
+      <span class="project-version">
+        master
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="gripen/Gripen" data-name="gripen">
+      <a href="../../Gripen.html">Gripen</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="gripen/Gripen/Controller" data-name="gripen::controller">
+      <a href="../../Gripen/Controller.html">Controller</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="gripen/Gripen/Controller/Action" data-name="gripen::controller::action">
+      <a href="../../Gripen/Controller/Action.html">Action</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="gripen/Gripen/Controller/Action/Error" data-name="gripen::controller::action::error">
+      <a href="../../Gripen/Controller/Action/Error.html">Error</a>
+      
+        <ul>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/Action/Error/InvalidQueryParameterName" data-name="gripen::controller::action::error::invalidqueryparametername">
+      <a href="../../Gripen/Controller/Action/Error/InvalidQueryParameterName.html">InvalidQueryParameterName</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/Action/Error/UnexpectedQueryParameters" data-name="gripen::controller::action::error::unexpectedqueryparameters">
+      <a href="../../Gripen/Controller/Action/Error/UnexpectedQueryParameters.html">UnexpectedQueryParameters</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/Default" data-name="gripen::controller::default">
+      <a href="../../Gripen/Controller/Default.html">Default</a>
+      
+    </li>
+  
+  <li class="parent " data-id="gripen/Gripen/Controller/HTTP" data-name="gripen::controller::http">
+      <a href="../../Gripen/Controller/HTTP.html">HTTP</a>
+      
+        <ul>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/HTTP/DocsError" data-name="gripen::controller::http::docserror">
+      <a href="../../Gripen/Controller/HTTP/DocsError.html">DocsError</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/HTTP/MissingRequestBody" data-name="gripen::controller::http::missingrequestbody(t)">
+      <a href="../../Gripen/Controller/HTTP/MissingRequestBody.html">MissingRequestBody</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/HTTP/RequestBody" data-name="gripen::controller::http::requestbody">
+      <a href="../../Gripen/Controller/HTTP/RequestBody.html">RequestBody</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/HTTP/RequestBodyTypes" data-name="gripen::controller::http::requestbodytypes">
+      <a href="../../Gripen/Controller/HTTP/RequestBodyTypes.html">RequestBodyTypes</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/HTTP/UnexpectedRequestBody" data-name="gripen::controller::http::unexpectedrequestbody(t)">
+      <a href="../../Gripen/Controller/HTTP/UnexpectedRequestBody.html">UnexpectedRequestBody</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/Metadata" data-name="gripen::controller::metadata">
+      <a href="../../Gripen/Controller/Metadata.html">Metadata</a>
+      
+    </li>
+  
+  <li class="parent " data-id="gripen/Gripen/Controller/PathActions" data-name="gripen::controller::pathactions">
+      <a href="../../Gripen/Controller/PathActions.html">PathActions</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="gripen/Gripen/Controller/PathActions/Error" data-name="gripen::controller::pathactions::error">
+      <a href="../../Gripen/Controller/PathActions/Error.html">Error</a>
+      
+        <ul>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/PathActions/Error/InvalidMethod" data-name="gripen::controller::pathactions::error::invalidmethod">
+      <a href="../../Gripen/Controller/PathActions/Error/InvalidMethod.html">InvalidMethod</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/PathActions/Error/MethodAlreadyDefined" data-name="gripen::controller::pathactions::error::methodalreadydefined">
+      <a href="../../Gripen/Controller/PathActions/Error/MethodAlreadyDefined.html">MethodAlreadyDefined</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/PathActions/Error/MethodConflict" data-name="gripen::controller::pathactions::error::methodconflict">
+      <a href="../../Gripen/Controller/PathActions/Error/MethodConflict.html">MethodConflict</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/PathType" data-name="gripen::controller::pathtype">
+      <a href="../../Gripen/Controller/PathType.html">PathType</a>
+      
+    </li>
+  
+  <li class="parent " data-id="gripen/Gripen/Controller/RouteResolver" data-name="gripen::controller::routeresolver">
+      <a href="../../Gripen/Controller/RouteResolver.html">RouteResolver</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="gripen/Gripen/Controller/RouteResolver/Error" data-name="gripen::controller::routeresolver::error">
+      <a href="../../Gripen/Controller/RouteResolver/Error.html">Error</a>
+      
+        <ul>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/RouteResolver/Error/MethodNotAllowed" data-name="gripen::controller::routeresolver::error::methodnotallowed">
+      <a href="../../Gripen/Controller/RouteResolver/Error/MethodNotAllowed.html">MethodNotAllowed</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/RouteResolver/Error/NotFound" data-name="gripen::controller::routeresolver::error::notfound">
+      <a href="../../Gripen/Controller/RouteResolver/Error/NotFound.html">NotFound</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="gripen/Gripen/Controller/StaticFile" data-name="gripen::controller::staticfile">
+      <a href="../../Gripen/Controller/StaticFile.html">StaticFile</a>
+      
+        <ul>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/StaticFile/Action" data-name="gripen::controller::staticfile::action">
+      <a href="../../Gripen/Controller/StaticFile/Action.html">Action</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/StaticFile/FilesystemPath" data-name="gripen::controller::staticfile::filesystempath">
+      <a href="../../Gripen/Controller/StaticFile/FilesystemPath.html">FilesystemPath</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Controller/WebSocket" data-name="gripen::controller::websocket">
+      <a href="../../Gripen/Controller/WebSocket.html">WebSocket</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Error" data-name="gripen::error">
+      <a href="../../Gripen/Error.html">Error</a>
+      
+    </li>
+  
+  <li class="parent " data-id="gripen/Gripen/Handler" data-name="gripen::handler">
+      <a href="../../Gripen/Handler.html">Handler</a>
+      
+        <ul>
+  
+  <li class=" " data-id="gripen/Gripen/Handler/Compress" data-name="gripen::handler::compress">
+      <a href="../../Gripen/Handler/Compress.html">Compress</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Handler/Final" data-name="gripen::handler::final">
+      <a href="../../Gripen/Handler/Final.html">Final</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Handler/HTTPHandlerCompat" data-name="gripen::handler::httphandlercompat(h)">
+      <a href="../../Gripen/Handler/HTTPHandlerCompat.html">HTTPHandlerCompat</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Handler/Logger" data-name="gripen::handler::logger">
+      <a href="../../Gripen/Handler/Logger.html">Logger</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Handler/Route" data-name="gripen::handler::route">
+      <a href="../../Gripen/Handler/Route.html">Route</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent open current" data-id="gripen/Gripen/Parameters" data-name="gripen::parameters">
+      <a href="../../Gripen/Parameters.html">Parameters</a>
+      
+        <ul>
+  
+  <li class="parent " data-id="gripen/Gripen/Parameters/Error" data-name="gripen::parameters::error">
+      <a href="../../Gripen/Parameters/Error.html">Error</a>
+      
+        <ul>
+  
+  <li class=" " data-id="gripen/Gripen/Parameters/Error/DuplicatedKey" data-name="gripen::parameters::error::duplicatedkey">
+      <a href="../../Gripen/Parameters/Error/DuplicatedKey.html">DuplicatedKey</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Parameters/Error/GlobPathNotFound" data-name="gripen::parameters::error::globpathnotfound">
+      <a href="../../Gripen/Parameters/Error/GlobPathNotFound.html">GlobPathNotFound</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Parameters/Error/InvalidValue" data-name="gripen::parameters::error::invalidvalue">
+      <a href="../../Gripen/Parameters/Error/InvalidValue.html">InvalidValue</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Parameters/Error/MissingRequiredQuery" data-name="gripen::parameters::error::missingrequiredquery">
+      <a href="../../Gripen/Parameters/Error/MissingRequiredQuery.html">MissingRequiredQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Parameters/Error/NoParametersAvailable" data-name="gripen::parameters::error::noparametersavailable">
+      <a href="../../Gripen/Parameters/Error/NoParametersAvailable.html">NoParametersAvailable</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Parameters/Error/PathNotFound" data-name="gripen::parameters::error::pathnotfound">
+      <a href="../../Gripen/Parameters/Error/PathNotFound.html">PathNotFound</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Parameters/Error/PathOrRequiredQueryNotFound" data-name="gripen::parameters::error::pathorrequiredquerynotfound">
+      <a href="../../Gripen/Parameters/Error/PathOrRequiredQueryNotFound.html">PathOrRequiredQueryNotFound</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Parameters/Error/QueryNotFound" data-name="gripen::parameters::error::querynotfound">
+      <a href="../../Gripen/Parameters/Error/QueryNotFound.html">QueryNotFound</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Parameters/GlobPath" data-name="gripen::parameters::globpath">
+      <a href="../../Gripen/Parameters/GlobPath.html">GlobPath</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Parameters/OptionalQuery" data-name="gripen::parameters::optionalquery">
+      <a href="../../Gripen/Parameters/OptionalQuery.html">OptionalQuery</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Parameters/Path" data-name="gripen::parameters::path">
+      <a href="../../Gripen/Parameters/Path.html">Path</a>
+      
+    </li>
+  
+  <li class=" current" data-id="gripen/Gripen/Parameters/PathType" data-name="gripen::parameters::pathtype">
+      <a href="../../Gripen/Parameters/PathType.html">PathType</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Parameters/Query" data-name="gripen::parameters::query">
+      <a href="../../Gripen/Parameters/Query.html">Query</a>
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Parameters/RequiredQuery" data-name="gripen::parameters::requiredquery">
+      <a href="../../Gripen/Parameters/RequiredQuery.html">RequiredQuery</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class="parent " data-id="gripen/Gripen/Response" data-name="gripen::response">
+      <a href="../../Gripen/Response.html">Response</a>
+      
+        <ul>
+  
+  <li class=" " data-id="gripen/Gripen/Response/Info" data-name="gripen::response::info">
+      <a href="../../Gripen/Response/Info.html">Info</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+  <li class=" " data-id="gripen/Gripen/Server" data-name="gripen::server">
+      <a href="../../Gripen/Server.html">Server</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">alias</span> Gripen::Parameters::PathType
+
+</h1>
+
+
+
+
+
+
+
+  <h2>
+    <a id="alias-definition" class="anchor" href="#alias-definition">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Alias Definition
+  </h2>
+  <code>Gripen::Parameters::Path.class | Symbol</code>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/grip-framework/gripen/blob/5047ec1df1852351508007d5cb5c758a1f492b5e/src/parameters.cr#L12" target="_blank">
+        parameters.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+</body>
+</html>
